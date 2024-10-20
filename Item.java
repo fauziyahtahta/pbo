@@ -4,28 +4,19 @@ public class Item {
     private String itemName;
     private String itemCode;
     private int itemStock;
+    private int quantity;
 
-    //Default constructor 
-    public Item(){}
+    //Default constructor
 
-    public Item(String name, String code){
+    public Item(String name, String code, double price, int quantity){
         this.itemName = name;
         this.itemCode = code;
-    }
-
-    public Item(double price, String code, String name){
-
-    }
-
-    public Item(String name, double price, String code){
-
-    }
-
-    //Konstruktor: dijalankan saat proses instansiasi. 
-    public Item(String code, String name, double price) {
-        this.itemCode = code;
-        this.itemName = name;
         this.itemPrice = price;
+        this.quantity = quantity;
+    }
+
+    public void setStock(int stock) {
+        this.itemStock = stock;
     }
 
     public int updateStock(int stockUpdate){
@@ -49,5 +40,12 @@ public class Item {
         return itemStock;
     }
 
-    
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public double getsubTotal(){
+        return itemPrice * quantity;
+    }
+
 }
