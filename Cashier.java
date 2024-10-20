@@ -19,15 +19,13 @@ public class Cashier {
         System.out.println("Jumlah item sebelum dihapus: " + items.size());
 
         for (int i = 0; i < items.size(); i++) {
-            // Debug info untuk cek kode item
             System.out.println("Cek item dengan kode: " + items.get(i).getCode());
-
-            // Gunakan trim() di sini
+            
             if (items.get(i).getCode().equals(code.trim())) {
-                items.remove(i);  // Hapus item kalau ketemu
+                items.remove(i);  u
                 System.out.println("Barang dengan kode " + code + " berhasil dihapus.");
                 found = true;
-                break;  // Keluar setelah ketemu dan dihapus
+                break;  
             }
         }
 
@@ -35,13 +33,8 @@ public class Cashier {
             System.out.println("Barang dengan kode " + code + " tidak ditemukan.");
         }
 
-        // Cek jumlah item setelah penghapusan
         System.out.println("Jumlah item setelah dihapus: " + items.size());
     }
-
-
-
-
 
     public void displayItems() {
         System.out.println("Daftar Barang: ");
